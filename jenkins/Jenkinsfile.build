@@ -1,0 +1,13 @@
+pipeline {
+  agent {
+    kubernetes {
+      label 'helm-pod'
+      containerTemplate {
+        name 'helm'
+        image 'wardviaene/helm-s3'
+        ttyEnabled true
+        command 'cat'
+      }
+    }
+  }
+}
