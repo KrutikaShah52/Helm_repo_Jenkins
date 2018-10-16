@@ -14,7 +14,7 @@ pipeline {
     stage('Run helm') {
       steps {
         container('helm-pod') {
-          git url: 'git://github.com/KrutikaShah52/Helm_repo_Jenkins.git', branch: 'master'
+          git url: 'git://github.com/wardviaene/kubernetes-course.git', branch: 'master'
           sh '''
              echo 'HEllooo'
          '''
